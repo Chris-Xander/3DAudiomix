@@ -7,7 +7,7 @@ export function Navbar() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
   
   const navLinks = [
     { to: '/', label: 'Home' },

@@ -8,14 +8,14 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="img-placeholder w-full h-full min-h-0" style={{ minHeight: '60vh' }}>
+          <div className="image-container w-full h-full min-h-0" style={{ minHeight: '60vh' }}>
             {/* User will add about hero image here */}
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
         </div>
 
         <div className="container mx-auto px-4 text-center z-10 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 grad-text">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             About Us
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto">
@@ -44,11 +44,11 @@ export default function About() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="img-placeholder aspect-video">
+            <div className="image-container aspect-video">
               {/* User will add sound engineering image here */}
             </div>
             <div className="animate-slide-in">
-              <h2 className="text-4xl font-bold mb-6 grad-text">Our Story</h2>
+              <h2 className="text-4xl font-bold mb-6 gradient-text">Our Story</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 3D Audiomix blends technology and creativity to craft immersive, high-quality audio experiences. 
                 With over a decade of industry expertise, we specialize in sound production, live audio engineering, 
@@ -65,7 +65,7 @@ export default function About() {
                 Our work is driven by a commitment to quality, innovation, and customer satisfaction.
               </p>
             </div>
-            <div className="img-placeholder aspect-video order-1 md:order-2">
+            <div className="image-container aspect-video order-1 md:order-2">
               {/* User will add working engineer image here */}
             </div>
           </div>
@@ -75,14 +75,14 @@ export default function About() {
       {/* Image Gallery Section */}
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 grad-text">
+          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
             Our Workspace
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((index) => (
-              <Card key={index} className="glass overflow-hidden lift">
-                <div className="img-placeholder aspect-square">
+              <Card key={index} className="glass-card overflow-hidden hover-lift">
+                <div className="image-container aspect-square">
                   {/* User will add gallery images here */}
                 </div>
               </Card>
@@ -94,7 +94,7 @@ export default function About() {
       {/* Values Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 grad-text">
+          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
             What We Stand For
           </h2>
           
@@ -113,7 +113,7 @@ export default function About() {
                 description: 'Building lasting relationships with our clients',
               },
             ].map((value, index) => (
-              <Card key={index} className="glass p-8 lift text-center">
+              <Card key={index} className="glass-card p-8 hover-lift text-center">
                 <h3 className="text-2xl font-bold mb-4 text-primary">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </Card>
