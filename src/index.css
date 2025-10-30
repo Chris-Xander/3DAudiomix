@@ -68,29 +68,29 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .glass-card {
+  .glass {
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
   }
 
-  .gradient-text {
+  .grad-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  .hover-lift {
+  .lift {
     transition: var(--transition-smooth);
   }
 
-  .hover-lift:hover {
+  .lift:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
   }
 
-  .image-container {
+  .img-placeholder {
     @apply relative overflow-hidden rounded-lg bg-muted;
     min-height: 200px;
     display: flex;
@@ -98,8 +98,28 @@ All colors MUST be HSL.
     justify-content: center;
   }
 
-  .image-container::before {
+  .img-placeholder::before {
     content: 'Image Placeholder';
     @apply text-muted-foreground text-sm;
+  }
+
+  .hero-title {
+    @apply text-5xl md:text-7xl font-bold;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .card-icon {
+    @apply w-12 h-12 text-primary;
   }
 }

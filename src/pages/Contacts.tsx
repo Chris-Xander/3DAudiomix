@@ -25,14 +25,14 @@ export default function Contacts() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="image-container w-full h-full min-h-0">
+          <div className="img-placeholder w-full h-full min-h-0">
             {/* User will add contacts hero image here */}
           </div>
           <div className="absolute inset-0 bg-background/80" />
         </div>
 
         <div className="container mx-auto px-4 text-center z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold grad-text mb-6 animate-fade-in">
             Contact Us
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -41,8 +41,8 @@ export default function Contacts() {
 
           {/* Image Gallery */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            <Card className="glass-card overflow-hidden hover-lift">
-              <div className="image-container aspect-video">
+            <Card className="glass overflow-hidden lift">
+              <div className="img-placeholder aspect-video">
                 {/* User will add audio mixing console image here */}
               </div>
               <div className="p-4">
@@ -53,8 +53,8 @@ export default function Contacts() {
               </div>
             </Card>
 
-            <Card className="glass-card overflow-hidden hover-lift">
-              <div className="image-container aspect-video">
+            <Card className="glass overflow-hidden lift">
+              <div className="img-placeholder aspect-video">
                 {/* User will add sound engineer image here */}
               </div>
               <div className="p-4">
@@ -75,9 +75,9 @@ export default function Contacts() {
             {contactInfo.map((contact, index) => (
               <Card
                 key={index}
-                className="glass-card p-8 hover-lift text-center group"
+                className="glass p-8 lift text-center group"
               >
-                <contact.icon className="w-12 h-12 text-primary mx-auto mb-4 group-hover:animate-float" />
+                <contact.icon className="card-icon mx-auto mb-4 group-hover:animate-float" />
                 <h2 className="text-2xl font-bold mb-3 text-primary">{contact.title}</h2>
                 <p className="text-lg text-foreground">{contact.info}</p>
               </Card>
@@ -89,7 +89,7 @@ export default function Contacts() {
       {/* Additional Info Section */}
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl font-bold mb-6 grad-text">
             Visit Our Studio
           </h2>
           <p className="text-lg text-muted-foreground mb-8">

@@ -28,14 +28,14 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image Container */}
         <div className="absolute inset-0 -z-10">
-          <div className="image-container w-full h-full min-h-0" style={{ minHeight: '100vh' }}>
+          <div className="img-placeholder w-full h-full min-h-0" style={{ minHeight: '100vh' }}>
             {/* User will add hero background image here */}
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
         </div>
 
         <div className="container mx-auto px-4 text-center z-10 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+          <h1 className="hero-title mb-6">
             Premier Audio Production
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto">
@@ -63,7 +63,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
+          <h2 className="section-title text-center mb-12">
             What We Offer
           </h2>
           
@@ -71,9 +71,9 @@ export default function Home() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="glass-card p-8 hover-lift group cursor-pointer"
+                className="glass p-8 lift group cursor-pointer"
               >
-                <feature.icon className="w-12 h-12 text-primary mb-4 group-hover:animate-float" />
+                <feature.icon className="card-icon mb-4 group-hover:animate-float" />
                 <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </Card>
