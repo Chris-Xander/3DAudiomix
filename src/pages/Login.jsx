@@ -16,14 +16,14 @@ export default function Login() {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -53,15 +53,15 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="image-container w-full h-full min-h-0" style={{ minHeight: '100vh' }}>
+        <div className="img-placeholder w-full h-full min-h-0" style={{ minHeight: '100vh' }}>
           {/* User will add login background image here */}
         </div>
         <div className="absolute inset-0 bg-background/80" />
       </div>
 
-      <Card className="glass-card p-8 w-full max-w-md animate-fade-in">
+      <Card className="glass p-8 w-full max-w-md animate-fade-in">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 gradient-text">
+          <h2 className="text-3xl font-bold mb-2 grad-text">
             Welcome Back
           </h2>
           <p className="text-muted-foreground">Sign in to your account</p>

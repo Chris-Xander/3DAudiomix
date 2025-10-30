@@ -16,12 +16,12 @@ export default function Services() {
     additionalinfo: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // For now, just show success message
@@ -54,14 +54,14 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="image-container w-full h-full min-h-0">
+          <div className="img-placeholder w-full h-full min-h-0">
             {/* User will add services hero image here */}
           </div>
           <div className="absolute inset-0 bg-background/80" />
         </div>
 
         <div className="container mx-auto px-4 text-center z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 grad-text animate-fade-in">
             Our Services
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ export default function Services() {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="glass-card p-8 hover-lift"
+                className="glass p-8 lift"
               >
                 <h3 className="text-2xl font-bold mb-4 text-primary">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
@@ -91,8 +91,8 @@ export default function Services() {
       {/* Booking Form Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-2xl">
-          <Card className="glass-card p-8">
-            <h2 className="text-3xl font-bold mb-2 text-center gradient-text">
+          <Card className="glass p-8">
+            <h2 className="text-3xl font-bold mb-2 text-center grad-text">
               Book a Service
             </h2>
             <p className="text-center text-muted-foreground mb-8">
