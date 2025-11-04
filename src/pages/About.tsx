@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import react from 'react';
+import aboutHero from '@/assets/k-nana-pnpVg_i9qCc-unsplash.jpg';
+import storyImg from '@/assets/Mandingo1.jpg';
+import engineerImg from '@/assets/man-working-with-radio-equipment.jpg';
+import gallery1 from '@/assets/IMG-20240805-WA0027.jpg';
+import gallery2 from '@/assets/close-up-sound-music-mixer-control-panel-blurred-background.jpg';
+import gallery3 from '@/assets/pexels-anna-pou-8132802.jpg';
 
 export default function About() {
   return (
@@ -9,7 +16,7 @@ export default function About() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="image-container w-full h-full min-h-0" style={{ minHeight: '60vh' }}>
-            {/* User will add about hero image here */}
+            <img src={aboutHero} alt="About hero" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
         </div>
@@ -45,7 +52,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="image-container aspect-video">
-              {/* User will add sound engineering image here */}
+              <img src={storyImg} alt="Our story" className="w-full h-full object-cover rounded" />
             </div>
             <div className="animate-slide-in">
               <h2 className="text-4xl font-bold mb-6 gradient-text">Our Story</h2>
@@ -66,7 +73,7 @@ export default function About() {
               </p>
             </div>
             <div className="image-container aspect-video order-1 md:order-2">
-              {/* User will add working engineer image here */}
+              <img src={engineerImg} alt="Engineer working" className="w-full h-full object-cover rounded" />
             </div>
           </div>
         </div>
@@ -76,14 +83,18 @@ export default function About() {
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 gradient-text">
-            Our Workspace
+            Our Passion in Audio-mixing
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <Card key={index} className="glass-card overflow-hidden hover-lift">
+            {[
+              gallery1,
+              gallery2,
+              gallery3,
+            ].map((imgSrc, idx) => (
+              <Card key={idx} className="glass-card overflow-hidden hover-lift">
                 <div className="image-container aspect-square">
-                  {/* User will add gallery images here */}
+                  <img src={imgSrc} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
                 </div>
               </Card>
             ))}

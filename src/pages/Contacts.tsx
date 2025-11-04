@@ -1,5 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import contactImage1 from '@/assets/man-working-with-radio-equipment.jpg';
+import contactImage2 from '@/assets/Stage Sound Engineering.jpg';
 
 export default function Contacts() {
   const contactInfo = [
@@ -25,9 +27,14 @@ export default function Contacts() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="img-placeholder w-full h-full min-h-0">
-            {/* User will add contacts hero image here */}
-          </div>
+          <div
+            className="image-container w-full h-full min-h-0"
+            style={{
+              backgroundImage: `url(${contactImage2})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
           <div className="absolute inset-0 bg-background/80" />
         </div>
 
@@ -42,8 +49,8 @@ export default function Contacts() {
           {/* Image Gallery */}
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
             <Card className="glass overflow-hidden lift">
-              <div className="img-placeholder aspect-video">
-                {/* User will add audio mixing console image here */}
+              <div className="image-container aspect-video">
+                <img src={contactImage1} alt='our consoles' className='contact-image1'/>
               </div>
               <div className="p-4">
                 <p className="text-sm text-muted-foreground">
@@ -54,8 +61,8 @@ export default function Contacts() {
             </Card>
 
             <Card className="glass overflow-hidden lift">
-              <div className="img-placeholder aspect-video">
-                {/* User will add sound engineer image here */}
+              <div className="image-container aspect-video">
+                <img src={contactImage2} alt='professional engineer' className='Engineer-Image'/>
               </div>
               <div className="p-4">
                 <p className="text-sm text-muted-foreground">

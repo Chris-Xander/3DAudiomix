@@ -20,7 +20,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold grad-text">
-          3D Audiomix
+          3DAudiomix
         </Link>
 
         {/* Desktop Navigation */}
@@ -36,12 +36,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link to="/login">
-            <Button variant="glass" size="sm">
-              Login
-            </Button>
-          </Link>
-          <Link to="/register">
+          <Link to="/services">
             <Button variant="hero" size="sm">
               Get Started
             </Button>
@@ -80,7 +75,7 @@ export function Navbar() {
                 Login
               </Button>
             </Link>
-            <Link to="/register" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/services" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="hero" size="sm" className="w-full">
                 Get Started
               </Button>

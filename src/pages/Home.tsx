@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Music, Radio, Mic } from 'lucide-react';
+import soundEngineering from '@/assets/soundEngineering.jpeg';
 
 export default function Home() {
   const features = [
@@ -25,18 +26,19 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image Container */}
-        <div className="absolute inset-0 -z-10">
-          <div className="img-placeholder w-full h-full min-h-0" style={{ minHeight: '100vh' }}>
-            {/* User will add hero background image here */}
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
-        </div>
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${soundEngineering})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+
 
         <div className="container mx-auto px-4 text-center z-10 animate-fade-in">
           <h1 className="hero-title mb-6">
-            Premier Audio Production
+            Welcome to 3DAudiomix
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto">
             Your trusted partner for professional sound engineering and audio equipment
@@ -91,7 +93,7 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join industry leaders who trust 3D Audiomix for their audio production needs
           </p>
-          <Link to="/register">
+          <Link to="/services">
             <Button variant="hero" size="lg">
               Get Started Today
             </Button>
